@@ -30,9 +30,9 @@ export const approveTokenTransafer = async (
 ) => {
   let response = await determineContractAddress(web3);
   if (!!response) {
-    const usdtAddress =
+    const usdcAddress =
       response.net == 43114 ? "0xc7198437980c041c805a1edcba50c1ce5db95118" : "0x3d1df20a1f4f147d5597c59161a34cbf9b2b5023";
-    const coinContract = new web3.eth.Contract(coinABI, usdtAddress);
+    const coinContract = new web3.eth.Contract(coinABI, usdcAddress);
 
     return await coinContract.methods
       .approve(response.address, toFixed(tokenAllocation).toString())
@@ -40,23 +40,23 @@ export const approveTokenTransafer = async (
   }
 };
 
-export const usdtAddBid = async (web3, index, amount, price, address) => {
+export const usdcAddBid = async (web3, index, amount, price, address) => {
   let response = await determineContractAddress(web3);
   console.log(response);
   if (!!response) {
     const contract = new web3.eth.Contract(fixedSwapABI, response.address);
     return await contract.methods
-      .addBidInUSDT(index, amount, price)
+      .addBidInUSDC(index, amount, price)
       .send({ from: address });
   }
 };
 
-export const getUsdtBalance = async (address, web3) => {
+export const getUsdcBalance = async (address, web3) => {
   let response = await determineContractAddress(web3);
   if (!!response) {
-    const usdtAddress =
+    const usdcAddress =
       response.net == 43114 ? "0xc7198437980c041c805a1edcba50c1ce5db95118" : "0x3d1df20a1f4f147d5597c59161a34cbf9b2b5023";
-    const contract = new web3.eth.Contract(coinABI, usdtAddress);
+    const contract = new web3.eth.Contract(coinABI, usdcAddress);
     return await contract.methods.balanceOf(address).call();
   }
 };
