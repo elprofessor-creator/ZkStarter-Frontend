@@ -17,7 +17,7 @@ const Tokensalecard = ({
   view,
   startAuctionAt,
   tokenSymbol,
-  isUSDT,
+  isUSDC,
   network,
 }) => {
   // const statusRef = useRef("");
@@ -87,18 +87,18 @@ const Tokensalecard = ({
                 <span>Pair</span>
                 <p>
                   {network === 4
-                    ? isUSDT
-                      ? "USDT"
+                    ? isUSDC
+                      ? "USDC"
                       : "ETH"
-                    : isUSDT
-                    ? "USDT"
+                    : isUSDC
+                    ? "USDC"
                     : "ETH"}
                   {} / {tokenSymbol}
                 </p>
               </div>
               <div>
                 <span>Swap Ratio</span>
-                <p>1 : {isUSDT ? swapRatio / 10 ** 12 : swapRatio}</p>
+                <p>1 : {isUSDC ? swapRatio / 10 ** 12 : swapRatio}</p>
               </div>
               <div>
                 <span className="me-3">Participants</span>

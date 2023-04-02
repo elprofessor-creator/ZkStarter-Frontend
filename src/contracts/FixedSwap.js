@@ -28,7 +28,7 @@ export const fixedSwapABI = [
       },
       {
         internalType: "address",
-        name: "usdt",
+        name: "usdc",
         type: "address",
       },
     ],
@@ -134,7 +134,7 @@ export const fixedSwapABI = [
           },
           {
             internalType: "bool",
-            name: "isUSDT",
+            name: "isUSDC",
             type: "bool",
           },
         ],
@@ -221,7 +221,7 @@ export const fixedSwapABI = [
           },
           {
             internalType: "bool",
-            name: "isUSDT",
+            name: "isUSDC",
             type: "bool",
           },
         ],
@@ -333,7 +333,7 @@ export const fixedSwapABI = [
           },
           {
             internalType: "bool",
-            name: "isUSDT",
+            name: "isUSDC",
             type: "bool",
           },
         ],
@@ -420,7 +420,7 @@ export const fixedSwapABI = [
           },
           {
             internalType: "bool",
-            name: "isUSDT",
+            name: "isUSDC",
             type: "bool",
           },
         ],
@@ -546,7 +546,7 @@ export const fixedSwapABI = [
         type: "uint256",
       },
     ],
-    name: "addBidInUSDT",
+    name: "addBidInUSDC",
     outputs: [],
     stateMutability: "payable",
     type: "function",
@@ -670,7 +670,7 @@ export const fixedSwapABI = [
           },
           {
             internalType: "bool",
-            name: "isUSDT",
+            name: "isUSDC",
             type: "bool",
           },
         ],
@@ -750,7 +750,7 @@ export const fixedSwapABI = [
           },
           {
             internalType: "bool",
-            name: "isUSDT",
+            name: "isUSDC",
             type: "bool",
           },
         ],
@@ -870,7 +870,7 @@ export const fixedSwapABI = [
           },
           {
             internalType: "bool",
-            name: "isUSDT",
+            name: "isUSDC",
             type: "bool",
           },
         ],
@@ -951,7 +951,7 @@ export const fixedSwapABI = [
           },
           {
             internalType: "bool",
-            name: "isUSDT",
+            name: "isUSDC",
             type: "bool",
           },
         ],

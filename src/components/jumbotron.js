@@ -50,7 +50,7 @@ const Jumbotron = () => {
                     aria-label="Example select with button addon"
                   >
                     <option selected>All Tokens</option>
-                    <option value="1">USDT</option>
+                    <option value="1">USDC</option>
                     <option value="2">AAVE</option>
                     <option value="3">USDC</option>
                   </select>

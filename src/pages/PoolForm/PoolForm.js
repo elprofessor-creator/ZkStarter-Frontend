@@ -8,7 +8,7 @@ import {
   approveTokenTransafer,
   getPoolById,
   determineContractAddress,
-  getUsdtBalance,
+  getUsdcBalance,
   withDrawUnSoldTokens,
 } from "../../utils/callContract";
 import { Web3Context } from "../../context/web3Context";
@@ -17,7 +17,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Countdown from "react-countdown";
 import { toast } from "react-toastify";
-import { usdtAddBid } from "../../utils/callContract";
+import { usdcAddBid } from "../../utils/callContract";
 import "./PoolForm.scss";
 
 // Countdown Timer
@@ -121,7 +121,7 @@ const Fixedswap = (props) => {
   const getTokenBalance = async () => {
     if (web3) {
       if (address) {
-        if (!pool.isUSDT) {
+        if (!pool.isUSDC) {
           await web3.eth
             .getBalance(address)
             .then((e) => setCurrentBalance(web3.utils.fromWei(e)));
@@ -129,7 +129,7 @@ const Fixedswap = (props) => {
           setNetwork(response.net);
           return;
         }
-        await getUsdtBalance(address, web3).then((e) =>
+        await getUsdcBalance(address, web3).then((e) =>
           setCurrentBalance(e / 10 ** 6)
         );
         const response = await determineContractAddress(web3);
@@ -215,8 +215,8 @@ const Fixedswap = (props) => {
 
   const handleClick = async (e) => {
     e.preventDefault();
-    console.log(pool?.isUSDT);
-    if (pool?.isUSDT) {
+    console.log(pool?.isUSDC);
+    if (pool?.isUSDC) {
       let bidString = toFixed(bidPrice * 10 ** 6).toString();
       if (bidString.indexOf(".") !== -1) {
         let index = bidString.indexOf(".");
@@ -241,7 +241,7 @@ const Fixedswap = (props) => {
         ).toString();
       }
       try {
-        await usdtAddBid(web3, params.id, amountString, bidString, address);
+        await usdcAddBid(web3, params.id, amountString, bidString, address);
         toast.success("Added bid");
       } catch (e) {
         console.log(e.message);
@@ -284,7 +284,7 @@ const Fixedswap = (props) => {
       contract_address.address
     );
     if (price !== "") {
-      const priceContract = pool?.isUSDT
+      const priceContract = pool?.isUSDC
         ? price * 10 ** 6
         : web3.utils.toWei(price);
       console.log(price);
@@ -292,7 +292,7 @@ const Fixedswap = (props) => {
       const Calamount = await contract.methods
         .calculateAmount(priceContract, pool.swapRatio, tokenDecimals)
         .call();
-      pool?.isUSDT
+      pool?.isUSDC
         ? setAmount(Calamount / 10 ** 6)
         : setAmount(web3.utils.fromWei(Calamount));
     }
@@ -374,14 +374,14 @@ const Fixedswap = (props) => {
                   <h3>
                     1{" "}
                     {network === 4
-                      ? pool?.isUSDT
-                        ? "USDT"
+                      ? pool?.isUSDC
+                        ? "USDC"
                         : "ETH"
-                      : pool?.isUSDT
-                      ? "USDT"
+                      : pool?.isUSDC
+                      ? "USDC"
                       : "ETH"}{" "}
                     ={" "}
-                    {pool?.isUSDT
+                    {pool?.isUSDC
                       ? pool?.swapRatio / 10 ** 12
                       : pool?.swapRatio}{" "}
                     {tokenSymbol}
@@ -396,7 +396,7 @@ const Fixedswap = (props) => {
                             pool.maxAmountPerWallet.toString()
                           ) === "100000000000000000000000000" ? (
                             "No Limit"
-                          ) : pool?.isUSDT ? (
+                          ) : pool?.isUSDC ? (
                             pool.maxAmountPerWallet / 10 ** 6
                           ) : (
                             web3?.utils.fromWei(
@@ -412,13 +412,13 @@ const Fixedswap = (props) => {
                           ) === "100000000000000000000000000" ? (
                             <></>
                           ) : network === 4 ? (
-                            pool?.isUSDT ? (
-                              " USDT"
+                            pool?.isUSDC ? (
+                              " USDC"
                             ) : (
                               " ETH"
                             )
-                          ) : pool?.isUSDT ? (
-                            " USDT"
+                          ) : pool?.isUSDC ? (
+                            " USDC"
                           ) : (
                             " ETH"
                           )
@@ -510,11 +510,11 @@ const Fixedswap = (props) => {
                       <span className="label">
                         Balance: {parseFloat(currentBalance).toFixed(4)}{" "}
                         {network === 4
-                          ? pool?.isUSDT
-                            ? "USDT"
+                          ? pool?.isUSDC
+                            ? "USDC"
                             : "ETH"
-                          : pool?.isUSDT
-                          ? "USDT"
+                          : pool?.isUSDC
+                          ? "USDC"
                           : "ETH"}
                       </span>
                     </div>
@@ -561,7 +561,7 @@ const Fixedswap = (props) => {
                         required
                         name="amount"
                         placeholder="Token Amount"
-                        value={pool?.isUSDT ? amount / 10 ** 12 : amount}
+                        value={pool?.isUSDC ? amount / 10 ** 12 : amount}
                       />
                     </div>
                   </>

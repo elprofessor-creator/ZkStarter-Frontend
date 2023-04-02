@@ -179,7 +179,7 @@ const Cardlist = ({
               view={searchBy.view}
               startAuctionAt={pool["startAuctionAt"]}
               tokenSymbol={pool["tokenSymbol"]}
-              isUSDT={pool["isUSDT"]}
+              isUSDC={pool["isUSDC"]}
               network={network}
             />
           );

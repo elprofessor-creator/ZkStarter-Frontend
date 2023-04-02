@@ -33,13 +33,13 @@ import { determineContractAddress } from "../../utils/callContract";
 
 const poolOptions = [
   { value: "eth", label: "ETH" },
-  { value: "usdt", label: "USDT" },
+  { value: "usdc", label: "USDC" },
   //{ value: "avax", label: "AVAX" },
 ];
 const poolOptionsAvax = [
   { value: "eth", label: "ETH" },
  // { value: "avax", label: "AVAX" },
-  { value: "usdt", label: "USDT" },
+  { value: "usdc", label: "USDC" },
 ];
 
 const Fixedswap = (props) => {
@@ -329,7 +329,7 @@ const Fixedswap = (props) => {
     //  address sellToken;
     //  uint256 amountOfSellToken;
     //  uint256 swapRatio;
-    //  bool isUSDT;
+    //  bool isUSDC;
 
     let pool = [
       poolName,
@@ -338,14 +338,14 @@ const Fixedswap = (props) => {
       getTimeStampsForDates(endDate),
       getTimeStampsForDates(claimDate),
       enableWhiteList,
-      currency.value == "usdt"
+      currency.value == "usdc"
         ? (maxAmountPerWallet * 10 ** 6).toString()
         : web3.utils.toWei(maxAmountPerWallet),
       isOnlySeeHolder,
       tokenAddress,
       toFixed(tokenAllocation).toString(),
-      currency.value == "usdt" ? swapRatio * 10 ** 12 : swapRatio,
-      currency.value == "usdt" ? true : false,
+      currency.value == "usdc" ? swapRatio * 10 ** 12 : swapRatio,
+      currency.value == "usdc" ? true : false,
     ];
 
     console.log("pool=>>>>>>>>", pool);
