@@ -53,7 +53,7 @@ const auctionABI = [
                     },
                     {
                         "internalType": "bool",
-                        "name": "onlyZksHolders",
+                        "name": "onlyZkstHolders",
                         "type": "bool"
                     },
                     {
@@ -135,7 +135,7 @@ const auctionABI = [
                     },
                     {
                         "internalType": "bool",
-                        "name": "onlyZksHolders",
+                        "name": "onlyZkstHolders",
                         "type": "bool"
                     },
                     {
@@ -217,7 +217,7 @@ const auctionABI = [
                     },
                     {
                         "internalType": "bool",
-                        "name": "onlyZksHolders",
+                        "name": "onlyZkstHolders",
                         "type": "bool"
                     },
                     {
@@ -299,7 +299,7 @@ const auctionABI = [
                     },
                     {
                         "internalType": "bool",
-                        "name": "onlyZksHolders",
+                        "name": "onlyZkstHolders",
                         "type": "bool"
                     },
                     {
@@ -381,7 +381,7 @@ const auctionABI = [
                     },
                     {
                         "internalType": "bool",
-                        "name": "onlyZksHolders",
+                        "name": "onlyZkstHolders",
                         "type": "bool"
                     },
                     {
@@ -593,7 +593,7 @@ const auctionABI = [
                     },
                     {
                         "internalType": "bool",
-                        "name": "onlyZksHolders",
+                        "name": "onlyZkstHolders",
                         "type": "bool"
                     },
                     {
@@ -693,7 +693,7 @@ const auctionABI = [
                     },
                     {
                         "internalType": "bool",
-                        "name": "onlyZksHolders",
+                        "name": "onlyZkstHolders",
                         "type": "bool"
                     },
                     {

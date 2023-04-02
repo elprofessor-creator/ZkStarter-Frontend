@@ -23,7 +23,7 @@ const TestPage = () => {
   const [startAuctionAt,setStartAuctionAt] = useState(null);
   const [endAuctionAt,setEndAuctionAt] = useState(null);
   const [claimAuctionFundsAt,setClaimAuctionFundsAt] = useState(null);
-  const [onlyZksHolders,setOnlyZksHolders] = useState(false);
+  const [onlyZkstHolders,setOnlyZkstHolders] = useState(false);
   const [enableWhiteList, setEnableWhiteList] = useState(false);
 
 
@@ -156,11 +156,11 @@ const TestPage = () => {
               />
             </label>
             <label>
-                Only Zks token holders:
+                Only Zkst token holders:
               <input
                 type="checkbox"
                 //   value={name}
-                //   onChange={(e) => setZksHolders()}
+                //   onChange={(e) => setZkstHolders()}
               />
             </label>
             <label>

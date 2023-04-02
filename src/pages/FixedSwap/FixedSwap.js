@@ -52,7 +52,7 @@ const Fixedswap = (props) => {
     "100000000000000000000000000"
   );
   const [network, setNetwork] = useState();
-  const [isOnlySeeHolder, setIsOnlyZksHolder] = useState(false);
+  const [isOnlySeeHolder, setIsOnlyZkstHolder] = useState(false);
   const [enableWhiteList, setEnableWhitelist] = useState(false);
 
   const [decimal, setDecimal] = useState(0);
@@ -325,7 +325,7 @@ const Fixedswap = (props) => {
     //  uint256 claimAuctionFundsAt;
     //  bool enableWhiteList;
     //  uint256 maxAmountPerWallet;
-    //  bool onlyZksHolders;
+    //  bool onlyZkstHolders;
     //  address sellToken;
     //  uint256 amountOfSellToken;
     //  uint256 swapRatio;
@@ -626,13 +626,13 @@ const Fixedswap = (props) => {
                           className="me-2"
                           required
                           onChange={(e) =>
-                            setIsOnlyZksHolder(e.target.checked)
+                            setIsOnlyZkstHolder(e.target.checked)
                           }
                           name="participant"
                           type="checkbox"
                           disabled={!isApproved}
                         />
-                        ZKS holders
+                        ZKST holders
                       </label>
                       <label
                         className="me-5"

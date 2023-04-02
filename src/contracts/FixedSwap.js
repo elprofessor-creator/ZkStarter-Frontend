@@ -8,22 +8,22 @@ export const fixedSwapABI = [
       },
       {
         internalType: "uint256",
-        name: "zksTransactionFee",
+        name: "zkstTransactionFee",
         type: "uint256",
       },
       {
         internalType: "uint256",
-        name: "zksTokenMinHolding",
+        name: "zkstTokenMinHolding",
         type: "uint256",
       },
       {
         internalType: "address",
-        name: "zksTokenAddress",
+        name: "zkstTokenAddress",
         type: "address",
       },
       {
         internalType: "address",
-        name: "zksHubWallet",
+        name: "zkstHubWallet",
         type: "address",
       },
       {
@@ -114,7 +114,7 @@ export const fixedSwapABI = [
           },
           {
             internalType: "bool",
-            name: "onlyZksHolders",
+            name: "onlyZkstHolders",
             type: "bool",
           },
           {
@@ -201,7 +201,7 @@ export const fixedSwapABI = [
           },
           {
             internalType: "bool",
-            name: "onlyZksHolders",
+            name: "onlyZkstHolders",
             type: "bool",
           },
           {
@@ -313,7 +313,7 @@ export const fixedSwapABI = [
           },
           {
             internalType: "bool",
-            name: "onlyZksHolders",
+            name: "onlyZkstHolders",
             type: "bool",
           },
           {
@@ -400,7 +400,7 @@ export const fixedSwapABI = [
           },
           {
             internalType: "bool",
-            name: "onlyZksHolders",
+            name: "onlyZkstHolders",
             type: "bool",
           },
           {
@@ -488,22 +488,22 @@ export const fixedSwapABI = [
       },
       {
         internalType: "uint256",
-        name: "zksTransactionFee",
+        name: "zkstTransactionFee",
         type: "uint256",
       },
       {
         internalType: "uint256",
-        name: "zksTokenMinHolding",
+        name: "zkstTokenMinHolding",
         type: "uint256",
       },
       {
         internalType: "address",
-        name: "zksTokenAddress",
+        name: "zkstTokenAddress",
         type: "address",
       },
       {
         internalType: "address",
-        name: "zksHubWallet",
+        name: "zkstHubWallet",
         type: "address",
       },
     ],
@@ -650,7 +650,7 @@ export const fixedSwapABI = [
           },
           {
             internalType: "bool",
-            name: "onlyZksHolders",
+            name: "onlyZkstHolders",
             type: "bool",
           },
           {
@@ -730,7 +730,7 @@ export const fixedSwapABI = [
           },
           {
             internalType: "bool",
-            name: "onlyZksHolders",
+            name: "onlyZkstHolders",
             type: "bool",
           },
           {
@@ -850,7 +850,7 @@ export const fixedSwapABI = [
           },
           {
             internalType: "bool",
-            name: "onlyZksHolders",
+            name: "onlyZkstHolders",
             type: "bool",
           },
           {
@@ -931,7 +931,7 @@ export const fixedSwapABI = [
           },
           {
             internalType: "bool",
-            name: "onlyZksHolders",
+            name: "onlyZkstHolders",
             type: "bool",
           },
           {
@@ -965,7 +965,7 @@ export const fixedSwapABI = [
   },
   {
     inputs: [],
-    name: "getZksAddress",
+    name: "getZkstAddress",
     outputs: [
       {
         internalType: "address",
@@ -1096,11 +1096,11 @@ export const fixedSwapABI = [
     inputs: [
       {
         internalType: "address",
-        name: "Zks",
+        name: "Zkst",
         type: "address",
       },
     ],
-    name: "updateZksAddress",
+    name: "updateZkstAddress",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
@@ -1113,7 +1113,7 @@ export const fixedSwapABI = [
         type: "uint256",
       },
     ],
-    name: "updateZksTransactionFee",
+    name: "updateZkstTransactionFee",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",

@@ -59,7 +59,7 @@ const lpABI =  [
                     },
                     {
                         "internalType": "bool",
-                        "name": "onlyZksHolders",
+                        "name": "onlyZkstHolders",
                         "type": "bool"
                     },
                     {
@@ -141,7 +141,7 @@ const lpABI =  [
                     },
                     {
                         "internalType": "bool",
-                        "name": "onlyZksHolders",
+                        "name": "onlyZkstHolders",
                         "type": "bool"
                     },
                     {
@@ -223,7 +223,7 @@ const lpABI =  [
                     },
                     {
                         "internalType": "bool",
-                        "name": "onlyZksHolders",
+                        "name": "onlyZkstHolders",
                         "type": "bool"
                     },
                     {
@@ -305,7 +305,7 @@ const lpABI =  [
                     },
                     {
                         "internalType": "bool",
-                        "name": "onlyZksHolders",
+                        "name": "onlyZkstHolders",
                         "type": "bool"
                     },
                     {
@@ -387,7 +387,7 @@ const lpABI =  [
                     },
                     {
                         "internalType": "bool",
-                        "name": "onlyZksHolders",
+                        "name": "onlyZkstHolders",
                         "type": "bool"
                     },
                     {
@@ -529,7 +529,7 @@ const lpABI =  [
                     },
                     {
                         "internalType": "bool",
-                        "name": "onlyZksHolders",
+                        "name": "onlyZkstHolders",
                         "type": "bool"
                     },
                     {

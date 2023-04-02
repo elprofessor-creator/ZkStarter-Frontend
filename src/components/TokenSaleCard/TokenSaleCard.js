@@ -11,7 +11,7 @@ const Tokensalecard = ({
   swapRatio,
   maxAmountPerWallet,
   endAuctionAt,
-  isOnlyZks,
+  isOnlyZkst,
   isOnlyWhiteList,
   claimAuctionFundsAt,
   view,
@@ -104,7 +104,7 @@ const Tokensalecard = ({
                 <span className="me-3">Participants</span>
                 <p className={view ? "text-end text-md-start" : "text-end"}>
                   {isOnlyWhiteList ? "WhiteList " : "Public "}
-                  {isOnlyZks ? "and for zks Holders" : ""}
+                  {isOnlyZkst ? "and for zks Holders" : ""}
                 </p>
               </div>
             </div>
