@@ -1200,4 +1200,4 @@ export const fixedSwapContractAddress =
 export const fujiSwapAddress = "0x";
 export const mainnetContractAddress = "0x";
 export const sepoliaSwapAddress = "0xBa36CEc803198De4959089aaB7686A209B6430f8";
-export const zkSyncTestnetSwapAddress = "0x297196873852c0B21E0323CA92eED887552d2cfd";
+export const zkSyncTestnetSwapAddress = "0x65Fb44885f4E8C2e0CDAa8Aa55EdbC3e1b199E50";
